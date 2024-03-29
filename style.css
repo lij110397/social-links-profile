@@ -1,0 +1,139 @@
+/* Reset Default setting*/
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* || Define global colors*/
+:root {
+  --color-grey: hsl(0, 0%, 20%);
+  --color-darkgrey: hsl(0, 0%, 12%);
+  --color-white: hsl(0, 0%, 100%);
+  --color-green: hsl(75, 94%, 57%);
+  --color-offblack: hsl(0, 0%, 8%);
+  --color-hover: hsl(0, 0%, 80%);
+  --font-size-base: 14px;
+}
+
+/* || Define global fonts*/
+@font-face {
+  font-family: "Inter";
+  src: url(assets/fonts/Inter-VariableFont_slnt\wght.ttf) format(truetype);
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter-Bold";
+  src: url(assets/fonts/static/Inter-Bold.ttf) format(truetype);
+  font-style: normal;
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Inter-Regular";
+  src: url(assets/fonts/static/Inter-Regular.ttf) format(truetype);
+  font-style: normal;
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Inter-SemiBold";
+  src: url(assets/fonts/static/Inter-SemiBold.ttf) format(truetype);
+  font-style: normal;
+  font-weight: 400;
+}
+
+/* || Define styles and layout*/
+html {
+  font-size: var(--font-size-base);
+}
+body {
+  /* General style of all*/
+  color: var(--color-white);
+
+  background-color: var(--color-offblack);
+  /* Place main in the middle of body */
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  background-color: var(--color-darkgrey);
+  width: 28rem;
+  height: 44rem;
+  border-radius: 1.4rem;
+
+  /* Place main in the middle of body*/
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  /* Layout of main */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 2.85rem;
+}
+
+img {
+  width: 6.45rem;
+  height: 6.45rem;
+  border-radius: 6.45rem;
+  margin-bottom: 2rem;
+}
+
+.linkcard-name {
+  font-size: 1.5rem;
+  font-family: "Inter-SemiBold", serif;
+  margin-bottom: 1rem;
+}
+
+.linkcard-location {
+  color: var(--color-green);
+  font-size: 1rem;
+  font-family: "Inter-SemiBold";
+  margin-bottom: 1.7rem;
+}
+
+.linkcard-intro {
+  font-family: "Inter-Regular";
+  margin-bottom: 1.4rem;
+}
+
+.linkcard-buttons {
+  font-size: 1.15rem;
+  font-family: "Inter-Bold";
+  display: flex;
+  flex-direction: column;
+}
+
+button[class*="linkcard-buttons"] {
+  /* clear the default styles of buttons*/
+  border: none;
+  outline: none;
+  box-shadow: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  color: var(--color-white);
+  font-size: 14px;
+  font-family: "Inter-SemiBold", serif;
+  background-color: var(--color-grey);
+  width: 21.4rem;
+  height: 3.43rem;
+  border-radius: 0.71rem;
+  margin-bottom: 1.14rem;
+}
+
+/* Action style*/
+button[class*="linkcard-buttons"]:hover {
+  background-color: var(--color-hover);
+}
+button[class*="linkcard-buttons"]:active {
+  color: var(--color-darkgrey);
+  background-color: var(--color-green);
+}
